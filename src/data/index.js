@@ -1,4 +1,4 @@
-const expenses = {
+export const expenses = {
   "Aug 22": [
     {
       Date: "08/01/2022",
@@ -193,7 +193,7 @@ const expenses = {
 
 const data = expenses["Aug 22"];
 
-const groupedData = data.reduce(
+export const groupedData = data.reduce(
   (obj, curr) => {
     const { Category, ...rest } = curr;
 
@@ -216,4 +216,4 @@ const groupedData = data.reduce(
   }
 );
 
-module.exports = { expenses, groupedData };
+// module.exports = { expenses, groupedData };
