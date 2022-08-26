@@ -1,0 +1,87 @@
+.table {
+  border: 0px solid #d3d3d3;
+  border-width: 1px 0 0 1px;
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: separate;
+
+  thead,
+  tfoot {
+    font-weight: 500;
+    background: #f4f4f5;
+  }
+
+  th,
+  td {
+    border: 0px solid #d3d3d3;
+    border-width: 0 1px 1px 0;
+  }
+  th {
+    padding: 24px;
+    position: sticky;
+    top: 0;
+    background: #f4f4f5;
+    z-index: 2;
+    user-select: none;
+  }
+
+  td {
+    padding: 12px 24px;
+
+    &.groupCol {
+      width: 250px;
+      cursor: pointer;
+      vertical-align: top;
+      user-select: none;
+      position: relative;
+
+      &:after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 16px;
+        top: 0;
+        left: 100%;
+        background: linear-gradient(
+          to right,
+          rgba(#000, 0.15),
+          rgba(#000, 0.03),
+          rgba(#000, 0)
+        );
+      }
+    }
+  }
+
+  tbody tr:hover,
+  .aggregate {
+    background: #ebf9ff;
+  }
+
+  .danger {
+    box-shadow: inset -10px 0 #e81159;
+  }
+
+  .currency {
+    letter-spacing: 0.05em;
+  }
+
+  .isSortable {
+    cursor: pointer;
+
+    &.isAsc,
+    &.isDesc,
+    &:hover {
+      box-shadow: inset 0 5px 0 #001c3c;
+    }
+  }
+
+  .sortIcon {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+
+    .icon {
+      filter: grayscale(100%);
+    }
+  }
+}
